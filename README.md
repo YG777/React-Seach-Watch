@@ -1,6 +1,7 @@
 Based on an online tutorial.
 
-Utilizing Youtube API.
+- YouTube Data API
+- Semantic UI CSS
 
 _______________________________________________________________________________________________________
 
