@@ -1,3 +1,9 @@
+Based on an online tutorial.
+
+Utilizing Youtube API.
+
+_______________________________________________________________________________________________________
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
