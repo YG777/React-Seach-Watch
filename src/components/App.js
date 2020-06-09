@@ -12,8 +12,10 @@ class App extends Component {
     
   }
 
+
   onSearchTermSubmit = async (searchTerm) => {
-    const KEY = "AIzaSyCXlPOInn72RmeGKVLH1SedSOSV73I_wNE";
+
+    const KEY = process.env.REACT_APP_UTUBE_API_KEY;
 
     const res = await youtube.get("/search", {
       params: {
