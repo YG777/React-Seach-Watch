@@ -6,6 +6,13 @@ import VideoDetail from "./VideoDetail";
 
 class App extends Component {
   state = { videos: [], selectedVideo: null };
+
+
+componentDidMount() {
+    this.onSearchTermSubmit('cats')
+//console.log('boooo', this)
+}
+
   onSearchTermSubmit = async (searchTerm) => {
     const KEY = "AIzaSyCXlPOInn72RmeGKVLH1SedSOSV73I_wNE";
 
@@ -18,7 +25,11 @@ class App extends Component {
         key: `${KEY}`,
       },
     });
-    this.setState({ videos: res.data.items });
+console.log(res.data)
+    this.setState({ 
+        videos: res.data.items,
+        selectedVideo: res.data.items[0]
+    });
   };
 
   onVideoSelect = (video) => {
@@ -28,13 +39,20 @@ class App extends Component {
   render() {
     return (
       <div className="ui container">
-        {this.state.videos.length}
         <SearchBar onSearchSubmit={this.onSearchTermSubmit} />
-        <VideoDetail video={this.state.selectedVideo}/>
-        <VideoList
-          onVideoSelect={this.onVideoSelect}
-          videos={this.state.videos}
-        />
+        <div className="ui grid">
+          <div className="ui row">
+            <div className="eleven wide column">
+              <VideoDetail video={this.state.selectedVideo} />
+            </div>
+            <div className="five wide column">
+              <VideoList
+                onVideoSelect={this.onVideoSelect}
+                videos={this.state.videos}
+              />
+            </div>
+          </div>
+        </div>
       </div>
     );
   }
