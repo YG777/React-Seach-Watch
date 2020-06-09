@@ -25,7 +25,7 @@ componentDidMount() {
         key: `${KEY}`,
       },
     });
-console.log(res.data)
+
     this.setState({ 
         videos: res.data.items,
         selectedVideo: res.data.items[0]
