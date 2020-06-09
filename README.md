@@ -2,7 +2,7 @@ Based on an online tutorial.
 
 - YouTube Data API
 - Semantic UI https://semantic-ui.com/ 
-![Screenshot](app.png)
+![Screenshot](/.app.png)
 _______________________________________________________________________________________________________
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
