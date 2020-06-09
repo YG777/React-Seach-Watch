@@ -7,11 +7,10 @@ import VideoDetail from "./VideoDetail";
 class App extends Component {
   state = { videos: [], selectedVideo: null };
 
-
-componentDidMount() {
-    this.onSearchTermSubmit('cats')
-//console.log('boooo', this)
-}
+  componentDidMount() {
+    this.onSearchTermSubmit("cats");
+    
+  }
 
   onSearchTermSubmit = async (searchTerm) => {
     const KEY = "AIzaSyCXlPOInn72RmeGKVLH1SedSOSV73I_wNE";
@@ -26,9 +25,9 @@ componentDidMount() {
       },
     });
 
-    this.setState({ 
-        videos: res.data.items,
-        selectedVideo: res.data.items[0]
+    this.setState({
+      videos: res.data.items,
+      selectedVideo: res.data.items[0],
     });
   };
 
