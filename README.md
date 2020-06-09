@@ -3,10 +3,9 @@ Based on an online tutorial.
 - YouTube Data API
 - Semantic UI https://semantic-ui.com/ 
 <p align="center">
-  <img src=".app.PNG/" max-width="650" title="screenshot">
+  <img src="./app.PNG/" max-width="650" title="screenshot">
 </p>
 
-![Screenshot](/.app.png)
 _______________________________________________________________________________________________________
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
