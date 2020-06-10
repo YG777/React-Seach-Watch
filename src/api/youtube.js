@@ -1,17 +1,43 @@
 import axios from "axios";
 
+const youtubeData = async (searchTerm) => {
 
-//https://www.googleapis.com/youtube/v3/search
+  const youtube = axios.create({
+    baseURL: "https://www.googleapis.com/youtube/v3",
+  });
+ 
+  const KEY = process.env.REACT_APP_UTUBE_API_KEY;
 
-const youTube = axios.create({
-  baseURL: 'https://www.googleapis.com/youtube/v3'
-  // params: {
-  //   part: 'snippet', 
-  //   type: 'video',
-  //   maxResults: 5,
-  //   key: `${}`
-  // }
-})
+  const videoData = await youtube.get("/search", {
+    params: {
+      q: searchTerm,
+      part: "snippet",
+      type: "video",
+      maxResults: 5,
+      key: `${KEY}`,
+    },
+  })
+  return videoData.data.items
+}
 
 
-export default youTube;
+
+// const youtubeData = async  (searchTerm) => {
+//   const KEY = process.env.REACT_APP_UTUBE_API_KEY;
+
+//   const res = await youtube.get("/search", {
+//     params: {
+//       q: searchTerm,
+//       part: "snippet",
+//       type: "video",
+//       maxResults: 5,
+//       key: `${KEY}`,
+//     },
+//   });
+// return res.data.items;
+
+// };
+
+
+
+export default youtubeData;

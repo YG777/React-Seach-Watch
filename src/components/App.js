@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import SearchBar from "./SearchBar";
-import youtube from "../api/youtube";
+import youtubeData from "../api/youtube";
 import VideoList from "./VideoList";
 import VideoDetail from "./VideoDetail";
 
@@ -9,27 +9,13 @@ class App extends Component {
 
   componentDidMount() {
     this.onSearchTermSubmit("cats");
-    
   }
 
-
   onSearchTermSubmit = async (searchTerm) => {
-
-    const KEY = process.env.REACT_APP_UTUBE_API_KEY;
-
-    const res = await youtube.get("/search", {
-      params: {
-        q: searchTerm,
-        part: "snippet",
-        type: "video",
-        maxResults: 5,
-        key: `${KEY}`,
-      },
-    });
-
+    const videos = await youtubeData(searchTerm);
     this.setState({
-      videos: res.data.items,
-      selectedVideo: res.data.items[0],
+      videos: videos,
+      selectedVideo: videos[0],
     });
   };
 
