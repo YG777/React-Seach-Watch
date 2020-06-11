@@ -5,10 +5,10 @@ import VideoList from "./VideoList";
 import VideoDetail from "./VideoDetail";
 
 class App extends Component {
-  state = { videos: [], selectedVideo: null };
+  state = { videos: [], selectedVideo: null, title:"Silvester Tube" };
 
   componentDidMount() {
-    this.onSearchTermSubmit("cats");
+    this.onSearchTermSubmit("silvester cat");
   }
 
   onSearchTermSubmit = async (searchTerm) => {
@@ -25,7 +25,9 @@ class App extends Component {
 
   render() {
     return (
+    
       <div className="ui container">
+        <div className="ui huge header green">{this.state.title}</div>
         <SearchBar onSearchSubmit={this.onSearchTermSubmit} />
         <div className="ui grid">
           <div className="ui row">
