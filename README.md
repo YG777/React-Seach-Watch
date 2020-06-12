@@ -3,7 +3,7 @@ Based on an online tutorial.
 - YouTube Data API
 - Semantic UI https://semantic-ui.com/ 
 <p align="center">
-  <img src="./app.PNG/" max-width="650" title="screenshot">
+  <img src="./silvester.PNG/" max-width="650" title="screenshot">
 </p>
 
 _______________________________________________________________________________________________________
