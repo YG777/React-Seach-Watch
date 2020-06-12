@@ -8,7 +8,7 @@ class App extends Component {
   state = { videos: [], selectedVideo: null, title:"Silvester Tube" };
 
   componentDidMount() {
-    this.onSearchTermSubmit("silvester cat");
+    this.onSearchTermSubmit("Silvester cat");
   }
 
   onSearchTermSubmit = async (searchTerm) => {
@@ -27,7 +27,7 @@ class App extends Component {
     return (
     
       <div className="ui container">
-        <div className="ui huge header green">{this.state.title}</div>
+        <h1 style={{color:"#FDF497", fontSize:"40px"}}>{this.state.title}</h1>
         <SearchBar onSearchSubmit={this.onSearchTermSubmit} />
         <div className="ui grid">
           <div className="ui row">

@@ -17,8 +17,8 @@ class SearchBar extends Component {
       <div className="search-bar ui segment">
         <form className="ui form" onSubmit={this.onSearchSubmit}>
           <div className="field">
-            <label>Search</label>
             <input
+              placeholder="Search"
               type="text"
               value={this.state.searchTerm}
               onChange={this.onInputChange}
